@@ -27,8 +27,12 @@ including the Red Hat package index and any architecture-specific constraints.
 `pyproject.toml`, `poetry.lock`, and exported `requirements.txt` manage the separate
 PyPI environment used for development and the upstream Dockerfile.
 
+Compilation uses universal resolution to preserve architecture-specific markers.
+The `[tool.uv]` environment in `pyproject.toml` limits it to Linux, matching the
+product image without resolving dependencies for other operating systems.
+
 To refresh the lockfile to the latest versions allowed by the product dependency
-bounds, run from this directory on Linux:
+bounds, run from this directory:
 
 ```bash
 make gen-requirements-aipcc

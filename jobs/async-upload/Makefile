@@ -119,6 +119,7 @@ AIPCC_PYTHON_VERSION ?= 3.12
 gen-requirements-aipcc:
 	uv pip compile requirements-aipcc.in \
 		--upgrade \
+		--universal \
 		--generate-hashes \
 		--python-version=$(AIPCC_PYTHON_VERSION) \
 		--emit-index-url \
