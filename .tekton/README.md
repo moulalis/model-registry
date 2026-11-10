@@ -6,7 +6,7 @@ All Tekton file updates **must be made in the `konflux-central` repository**.
 
 ## ✅ How to Make Changes
 
-To modify the pipelines for `model-registry` in the `rhoai-3.7` release:
+To modify the pipelines for `model-registry` in the `rhoai-3.7-ea.1` release:
 
 - Clone the [`konflux-central`](https://github.com/red-hat-data-services/konflux-central) repository.
 
@@ -18,7 +18,9 @@ cd konflux-central
 - Check out the release branch
 
 ```bash
-git checkout rhoai-3.7
+
+git checkout rhoai-3.7-ea.1
+
 ```
 
 - Navigate to the Tekton files for your component(s).
@@ -32,8 +34,10 @@ cd pipelineruns/model-registry/.tekton
 - Commit and push your changes.
 
 ```bash
-git commit -am "Update pipelinerun for model-registry (rhoai-3.7)"
-git push origin rhoai-3.7
+
+git commit -am "Update pipelinerun for model-registry (rhoai-3.7-ea.1)"
+git push origin rhoai-3.7-ea.1
+
 ```
 
 - Once pushed, automation will automatically sync your updates to the corresponding component repository.
